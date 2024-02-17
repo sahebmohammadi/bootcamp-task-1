@@ -1,0 +1,188 @@
+@import url("./fonts.css");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-secondary-900: rgb(17, 24, 39);
+  --color-secondary-800: rgb(31, 41, 55);
+  --color-secondary-700: rgb(55, 65, 81);
+  --color-secondary-600: rgb(75, 85, 99);
+  --color-secondary-500: rgb(107, 114, 128);
+  --color-secondary-400: rgb(156, 163, 175);
+  --color-secondary-300: rgb(209, 213, 219);
+  --color-secondary-200: rgb(229, 231, 235);
+  --color-secondary-100: rgb(243, 244, 246);
+  --color-secondary-50: rgb(249, 250, 251);
+  --color-secondary-0: rgb(255, 255, 255);
+
+  --color-primary-900: rgb(77, 112, 255);
+  --color-primary-800: rgb(92, 124, 255);
+  --color-primary-700: rgb(92, 124, 255);
+  --color-primary-600: rgb(128, 153, 255);
+  --color-primary-500: rgb(146, 167, 255);
+  --color-primary-400: rgb(164, 182, 255);
+  --color-primary-300: rgb(183, 197, 255);
+  --color-primary-200: rgb(201, 211, 255);
+  --color-primary-100: rgb(219, 226, 255);
+  --color-primary-50: rgb(228, 233, 255);
+
+  --border-radius-tiny: 3px;
+  --border-radius-sm: 5px;
+  --border-radius-md: 7px;
+  --border-radius-lg: 9px;
+
+  --color-success: rgb(0, 192, 115);
+  --color-warning: rgb(255, 153, 0);
+  --color-error: rgb(255, 71, 87);
+  --color-red-700: rgb(185, 28, 28);
+  --color-red-800: rgb(153, 27, 27);
+  --color-red-500: rgb(239, 68, 68);
+  --color-red-300: rgb(252, 165, 165);
+  --color-red-100: rgb(254, 226, 226);
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--color-secondary-100);
+}
+
+body,
+* {
+  font-family: Vazirmatn;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+input {
+  outline: none;
+  display: block;
+  width: 100%;
+  border: 1px solid var(--color-secondary-300);
+  border-radius: var(--border-radius-lg);
+  padding: 1rem 2rem;
+  font-weight: 400;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary-700);
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  border-radius: var(--border-radius-lg);
+  padding: 1rem 2rem;
+}
+
+.btn--primary {
+  background-color: var(--color-primary-900);
+  color: var(--color-secondary-0);
+}
+
+.btn--outline {
+  color: var(--color-primary-900);
+  border: 1px solid var(--color-primary-900);
+}
+
+/* backdrop */
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
+  z-index: 10;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: var(--color-secondary-0);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  width: calc(100vw - 4rem);
+  max-width: 60rem;
+  z-index: 2;
+
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-secondary-300);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.modal__header p {
+  text-align: center;
+  flex: 1;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-secondary-700);
+}
+
+.modal__content {
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.modal__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.modal__actions button {
+  flex: 1;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); */
+  gap: 2rem;
+}
+
+.form__control {
+}
+
+.form__control .form__input {
+}
+
+@media screen and (min-width: 600px) {
+  .form {
+    grid-template-columns: 1fr 1fr;
+  }
+}

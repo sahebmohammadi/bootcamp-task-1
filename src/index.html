@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge #1</title>
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+  <h1>چالش اول - بوت کمپ اول</h1>
+  <button class="btn btn--primary" id="open-modal">افزودن اطلاعات</button>
+
+  <div class="backdrop">
+    <div class="modal">
+      <div class="modal__header">
+        <p>تکمیل اطلاعات</p>
+        <button class="close-modal">❌</button>
+      </div>
+      <div class="modal__content">
+
+        <form class="form">
+          <div class="form__control">
+            <label for="name">نام و نام خانوادگی</label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div class="form__control">
+            <label for="email">ایمیل</label>
+            <input type="text" name="email" id="email">
+          </div>
+          <div class="form__control">
+            <label for-="phoneNumber">شماره موبایل</label>
+            <input type="text" name-="phoneNumber" id-="phoneNumber">
+          </div>
+          <div class="form__control">
+            <label for="expertise">تخصص</label>
+            <input type="text" name="expertise" id="expertise">
+          </div>
+        </form>
+
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--primary">تایید</button>
+        <button class="btn btn--outline">انصراف</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
